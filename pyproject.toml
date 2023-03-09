@@ -15,7 +15,7 @@ classifiers = [
 
 [project.optional-dependencies]
 dev = [
-  "isort == 5.11.4",
+  "isort == 5.12.0",
   "black == 22.12.0",
   "mypy == 1.0.1",
   "nox == 2022.11.21",
