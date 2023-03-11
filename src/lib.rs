@@ -1,7 +1,10 @@
 use std::{collections::HashMap, path::PathBuf};
 
 use pyo3::{exceptions::PyValueError, prelude::*};
-use structures::SvData;
+use structures::{
+    SvData, SvDataKind, SvDataType, SvInstance, SvModuleDeclaration, SvNetType,
+    SvPackageDeclaration, SvParamType, SvParameter, SvPort, SvPortDirection, SvSignedness,
+};
 use sv_module::module_declaration_ansi;
 use sv_package::package_declaration;
 use sv_parser::{parse_sv, NodeEvent, RefNode, SyntaxTree};
@@ -71,6 +74,17 @@ fn sv_to_structure(syntax_tree: &SyntaxTree, filepath: &str, svdata: &mut SvData
 fn python_svdata(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(read_sv_file, m)?)?;
     m.add_class::<SvData>()?;
+    m.add_class::<SvModuleDeclaration>()?;
+    m.add_class::<SvPort>()?;
+    m.add_class::<SvPortDirection>()?;
+    m.add_class::<SvPackageDeclaration>()?;
+    m.add_class::<SvParameter>()?;
+    m.add_class::<SvParamType>()?;
+    m.add_class::<SvDataKind>()?;
+    m.add_class::<SvSignedness>()?;
+    m.add_class::<SvDataType>()?;
+    m.add_class::<SvNetType>()?;
+    m.add_class::<SvInstance>()?;
 
     Ok(())
 }
