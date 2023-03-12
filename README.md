@@ -1,3 +1,5 @@
+[![Documentation Status](https://readthedocs.org/projects/python-svdata/badge/?version=latest)](https://python-svdata.readthedocs.io/en/latest/?badge=latest)
+
 # Python Svdata
 
 This is a copy of the excellent repository https://github.com/davemcewan/svdata,
