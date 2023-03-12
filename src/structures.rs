@@ -174,8 +174,8 @@ impl SvParameter {
 /// Parameter types.
 ///
 /// Args:
-///   Parameter (SvParamType): A parameter.
-///   LocalParam (SvParamType): A local parameter.
+///   Parameter (str): A parameter.
+///   LocalParam (str): A local parameter.
 #[derive(Debug, Clone, PartialEq)]
 #[pyclass]
 pub enum SvParamType {
@@ -201,11 +201,11 @@ impl SvParamType {
 /// Port directions.
 ///
 /// Args:
-///    Inout (SvPortDirection): An inout port.
-///    Input (SvPortDirection): An input port.
-///    Output (SvPortDirection): An output port.
-///    Ref (SvPortDirection): A ref port.
-///    IMPLICIT (SvPortDirection): An implicit port.
+///    Inout (str): An inout port.
+///    Input (str): An input port.
+///    Output (str): An output port.
+///    Ref (str): A ref port.
+///    IMPLICIT (str): An implicit port.
 #[derive(Debug, Clone, PartialEq)]
 #[pyclass]
 pub enum SvPortDirection {
@@ -232,9 +232,9 @@ impl SvPortDirection {
 /// Data kinds.
 ///
 /// Args:
-///    Net (SvDataKind): A net.
-///    Variable (SvDataKind): A variable.
-///    IMPLICIT (SvDataKind): An implicit data kind.
+///    Net (str): A net.
+///    Variable (str): A variable.
+///    IMPLICIT (str): An implicit data kind.
 #[derive(Debug, Clone, PartialEq)]
 #[pyclass]
 pub enum SvDataKind {
@@ -257,10 +257,10 @@ impl SvDataKind {
 /// Signedness.
 ///
 /// Args:
-///   Signed (SvSignedness): A signed value.
-///   Unsigned (SvSignedness): An unsigned value.
-///   Unsupported (SvSignedness): An unsupported value.
-///   IMPLICIT (SvSignedness): An implicit value.
+///   Signed (str): A signed value.
+///   Unsigned (str): An unsigned value.
+///   Unsupported (str): An unsupported value.
+///   IMPLICIT (str): An implicit value.
 #[derive(Debug, Clone, PartialEq)]
 #[pyclass]
 pub enum SvSignedness {
@@ -285,27 +285,27 @@ impl SvSignedness {
 /// Data types.
 ///
 /// Args:
-///     Logic (SvDataType): A logic type.
-///     Reg (SvDataType): A reg type.
-///     Bit (SvDataType): A bit type.
-///     Byte (SvDataType): A byte type.
-///     Integer (SvDataType): An integer type.
-///     Int (SvDataType): An int type.
-///     Shortint (SvDataType): A shortint type.
-///     Longint (SvDataType): A longint type.
-///     Time (SvDataType): A time type.
-///     Real (SvDataType): A real type.
-///     Shortreal (SvDataType): A shortreal type.
-///     Realtime (SvDataType): A realtime type.
-///     Array (SvDataType): An array type.
-///     Enum (SvDataType): An enum type.
-///     Struct (SvDataType): A struct type.
-///     Union (SvDataType): A union type.
-///     Class (SvDataType): A class type.
-///     TypeRef (SvDataType): A type reference.
-///     String (SvDataType): A string type.
-///     Unsupported (SvDataType): An unsupported type.
-///     IMPLICIT (SvDataType): An implicit type.
+///     Logic (str): A logic type.
+///     Reg (str): A reg type.
+///     Bit (str): A bit type.
+///     Byte (str): A byte type.
+///     Integer (str): An integer type.
+///     Int (str): An int type.
+///     Shortint (str): A shortint type.
+///     Longint (str): A longint type.
+///     Time (str): A time type.
+///     Real (str): A real type.
+///     Shortreal (str): A shortreal type.
+///     Realtime (str): A realtime type.
+///     Array (str): An array type.
+///     Enum (str): An enum type.
+///     Struct (str): A struct type.
+///     Union (str): A union type.
+///     Class (str): A class type.
+///     TypeRef (str): A type reference.
+///     String (str): A string type.
+///     Unsupported (str): An unsupported type.
+///     IMPLICIT (str): An implicit type.
 #[derive(Debug, Clone, PartialEq)]
 #[pyclass]
 pub enum SvDataType {
@@ -364,19 +364,19 @@ impl SvDataType {
 /// Net types.
 ///
 /// Args:
-///     Wire (SvNetType): A wire.
-///     Uwire (SvNetType): An uwire.
-///     Tri (SvNetType): A tri.
-///     Wor (SvNetType): A wor.
-///     Wand (SvNetType): A wand.
-///     Triand (SvNetType): A triand.
-///     Trior (SvNetType): A trior.
-///     Trireg (SvNetType): A trireg.
-///     Tri0 (SvNetType): A tri0.
-///     Tri1 (SvNetType): A tri1.
-///     Supply0 (SvNetType): A supply0.
-///     Supply1 (SvNetType): A supply1.
-///     IMPLICIT (SvNetType): An implicit net type.
+///     Wire (str): A wire.
+///     Uwire (str): An uwire.
+///     Tri (str): A tri.
+///     Wor (str): A wor.
+///     Wand (str): A wand.
+///     Triand (str): A triand.
+///     Trior (str): A trior.
+///     Trireg (str): A trireg.
+///     Tri0 (str): A tri0.
+///     Tri1 (str): A tri1.
+///     Supply0 (str): A supply0.
+///     Supply1 (str): A supply1.
+///     IMPLICIT (str): An implicit net type.
 #[derive(Debug, Clone, PartialEq)]
 #[pyclass]
 pub enum SvNetType {
